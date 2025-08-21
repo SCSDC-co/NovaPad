@@ -30,16 +30,38 @@
         <Setter Property="Width" Value="150" />
         <Setter Property="HorizontalContentAlignment" Value="Center" />
         <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="Foreground" Value="#2a2a2a" />
+        <Setter Property="FontWeight" Value="Bold" />
+        <Setter Property="FontSize" Value="18" />
+        <Setter Property="RenderTransform" Value="none" />
+        <Setter Property="Transitions" Value="{x:Null}" />
 
         <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
             <Setter Property="Background" Value="#74966a" />
             <Setter Property="BorderBrush" Value="#74966a" />
+            <Setter Property="Foreground" Value="#2a2a2a" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="RenderTransform" Value="none" />
+            <Setter Property="Cursor" Value="Hand" />
         </Style>
 
         <Style Selector="^:focus /template/ ContentPresenter#PART_ContentPresenter">
             <Setter Property="Background" Value="#74966a" />
             <Setter Property="BorderBrush" Value="#74966a" />
+            <Setter Property="Foreground" Value="#2a2a2a" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="RenderTransform" Value="none" />
+        </Style>
+
+        <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="#7d966a" />
+            <Setter Property="BorderBrush" Value="#7d966a" />
+            <Setter Property="Foreground" Value="#2a2a2a" />
+            <Setter Property="FontWeight" Value="Bold" />
+            <Setter Property="FontSize" Value="18" />
+            <Setter Property="RenderTransform" Value="none" />
         </Style>
     </Style>
-
 </Styles>
