@@ -1,0 +1,45 @@
+﻿<Styles xmlns="https://github.com/avaloniaui" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+    <Style Selector="TextBox.TextBox-1">
+        <Setter Property="Background" Value="#2a2a2a" />
+        <Setter Property="BorderBrush" Value="#2a2a2a" />
+        <Setter Property="Margin" Value="10,0" />
+        <Setter Property="AcceptsTab" Value="True" />
+        <Setter Property="AcceptsReturn" Value="True" />
+        <Setter Property="CornerRadius" Value="10" />
+
+        <Style Selector="^:pointerover">
+            <Style Selector="^ /template/ Border#PART_BorderElement">
+                <Setter Property="BorderBrush" Value="#2a2a2a" />
+                <Setter Property="Background" Value="#2a2a2a" />
+            </Style>
+        </Style>
+
+        <Style Selector="^:focus">
+            <Style Selector="^ /template/ Border#PART_BorderElement">
+                <Setter Property="Background" Value="#2a2a2a" />
+                <Setter Property="BorderBrush" Value="#2a2a2a" />
+            </Style>
+        </Style>
+    </Style>
+
+    <Style Selector="Button.Button-1">
+        <Setter Property="Background" Value="#74966a" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Margin" Value="5,0" />
+        <Setter Property="Height" Value="40" />
+        <Setter Property="Width" Value="150" />
+        <Setter Property="HorizontalContentAlignment" Value="Center" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+
+        <Style Selector="^:pointerover /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="#74966a" />
+            <Setter Property="BorderBrush" Value="#74966a" />
+        </Style>
+
+        <Style Selector="^:focus /template/ ContentPresenter#PART_ContentPresenter">
+            <Setter Property="Background" Value="#74966a" />
+            <Setter Property="BorderBrush" Value="#74966a" />
+        </Style>
+    </Style>
+
+</Styles>
