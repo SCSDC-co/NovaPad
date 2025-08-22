@@ -6,6 +6,7 @@
         <Setter Property="AcceptsTab" Value="True" />
         <Setter Property="AcceptsReturn" Value="True" />
         <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Padding" Value="10,5" />
 
         <Style Selector="^:pointerover">
             <Style Selector="^ /template/ Border#PART_BorderElement">
@@ -20,6 +21,53 @@
                 <Setter Property="BorderBrush" Value="#2a2a2a" />
             </Style>
         </Style>
+    </Style>
+
+    <Style Selector="Thumb">
+        <Setter Property="Background" Value="#2a2a2a" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="Transitions">
+            <Transitions>
+                <BrushTransition Duration="0:0:0.1" Property="Background" />
+                <TransformOperationsTransition Duration="0:0:0.1" Property="RenderTransform" />
+            </Transitions>
+        </Setter>
+        <Style Selector="^:pointerover /template/ Border">
+            <Setter Property="Background" Value="#90b078" />
+        </Style>
+        <Style Selector="^:pressed /template/ Border">
+            <Setter Property="Background" Value="#5c7a55" />
+        </Style>
+    </Style>
+
+    <Style Selector="ScrollBar">
+        <Setter Property="MinWidth" Value="12" />
+        <Setter Property="MinHeight" Value="12" />
+        <Setter Property="Background" Value="#2a2a2a" />
+        <Setter Property="CornerRadius" Value="10" />
+        <Setter Property="AllowAutoHide" Value="False" />
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid>
+                    <Track
+                        Maximum="{TemplateBinding Maximum}"
+                        Minimum="{TemplateBinding Minimum}"
+                        Orientation="{TemplateBinding Orientation}"
+                        Value="{TemplateBinding Value,
+                                                Mode=TwoWay}"
+                        ViewportSize="{TemplateBinding ViewportSize}"
+                        x:Name="PART_Track">
+                        <Track.DecreaseButton>
+                            <RepeatButton />
+                        </Track.DecreaseButton>
+                        <Track.IncreaseButton>
+                            <RepeatButton />
+                        </Track.IncreaseButton>
+                        <Thumb />
+                    </Track>
+                </Grid>
+            </ControlTemplate>
+        </Setter>
     </Style>
 
     <Style Selector="Button.Button-1">
@@ -56,12 +104,32 @@
         </Style>
 
         <Style Selector="^:pressed /template/ ContentPresenter#PART_ContentPresenter">
-            <Setter Property="Background" Value="#7d966a" />
-            <Setter Property="BorderBrush" Value="#7d966a" />
+            <Setter Property="Background" Value="#5c7a55" />
+            <Setter Property="BorderBrush" Value="#5c7a55" />
             <Setter Property="Foreground" Value="#2a2a2a" />
             <Setter Property="FontWeight" Value="Bold" />
             <Setter Property="FontSize" Value="18" />
             <Setter Property="RenderTransform" Value="none" />
+        </Style>
+    </Style>
+
+    <Style Selector="Border.Border-1">
+        <Setter Property="Background" Value="#2a2a2a" />
+        <Setter Property="BorderBrush" Value="#2a2a2a" />
+        <Setter Property="CornerRadius" Value="10" />
+
+        <Style Selector="^:pointerover">
+            <Style Selector="^ /template/ Border#PART_BorderElement">
+                <Setter Property="BorderBrush" Value="#2a2a2a" />
+                <Setter Property="Background" Value="#2a2a2a" />
+            </Style>
+        </Style>
+
+        <Style Selector="^:focus">
+            <Style Selector="^ /template/ Border#PART_BorderElement">
+                <Setter Property="Background" Value="#2a2a2a" />
+                <Setter Property="BorderBrush" Value="#2a2a2a" />
+            </Style>
         </Style>
     </Style>
 </Styles>
